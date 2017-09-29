@@ -4,7 +4,7 @@ import os
 
 def rename(html,path):
 	filename = html#生成的html
-	path = path#下载后视频存在路径
+	path = path+"\\"#下载后视频存在路径
 
 	f=open(filename,'r',encoding='utf-8')
 	LessonName=re.findall(r'(100.*?)<',f.read())
@@ -49,5 +49,5 @@ if __name__ == "__main__":
     ispath = os.path.exists(path)
     if ispath==False:
         exit("文件不存在")
-        
+
     rename(html,path)
