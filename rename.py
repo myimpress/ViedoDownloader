@@ -40,5 +40,14 @@ if __name__ == "__main__":
 
     
     html = input("\n请输入html文件名:\n")
+
+    ishtml = os.path.exists(html)
+    if ishtml==False:
+        exit("文件不存在")
+
     path = input("\n请输视频地址:\n")
+    ispath = os.path.exists(path)
+    if ispath==False:
+        exit("文件不存在")
+        
     rename(html,path)
